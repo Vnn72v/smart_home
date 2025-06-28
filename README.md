@@ -252,7 +252,8 @@ python visualize_user.py
 
 ## 6. postman接口测试集
 已经制作好指令的json文件，具体操作包括：
-[查看设备数据 JSON 文件]([(https://github.com/Vnn72v/smart_home/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/final_postman_collection.json)])
+[点击这里查看 Postman JSON 测试集合（final_postman_collection.json）](https://github.com/Vnn72v/smart_home/blob/master/%E6%95%B0%E6%8D%AE%E5%BA%93/final_postman_collection.json)
+
 
 Fetched contentFetched content
 ### ✅ 包含内容：
