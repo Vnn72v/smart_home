@@ -1,0 +1,793 @@
+{
+  "info": {
+    "_postman_id": "智能家居合集最终修复",
+    "name": "智能家居接口合集（最终修复）",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "创建用户",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"测试用户\", \"house_area\": 80, \"email\": \"test@example.com\", \"phone\": \"12345678901\", \"age\": 28, \"gender\": \"女\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有用户",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户信息",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "更新用户信息",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"测试用户\", \"house_area\": 80, \"email\": \"test@example.com\", \"phone\": \"12345678901\", \"age\": 28, \"gender\": \"女\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "删除用户",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户设备列表",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26/devices",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26",
+            "devices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户使用记录",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26/usage",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26",
+            "usage"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户反馈",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26/feedback",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26",
+            "feedback"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取用户安防事件",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/users/26/security_events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "users",
+            "26",
+            "security_events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "创建设备",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/devices/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "devices"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"智能灯\", \"type\": \"照明\", \"status\": \"在线\", \"room\": \"客厅\", \"owner_id\": 26}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有设备",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/devices/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "devices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取设备信息",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/devices/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "devices",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "更新设备信息",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/devices/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "devices",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\": \"智能灯\", \"type\": \"照明\", \"status\": \"在线\", \"room\": \"客厅\", \"owner_id\": 26}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "删除设备",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/devices/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "devices",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "创建使用记录",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/usage_logs/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "usage_logs"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"device_id\": 1, \"user_id\": 26, \"duration\": 15, \"action\": \"启动\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有使用记录",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/usage_logs/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "usage_logs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "更新使用记录",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/usage_logs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "usage_logs",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"device_id\": 1, \"user_id\": 26, \"duration\": 15, \"action\": \"启动\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "删除使用记录",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/usage_logs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "usage_logs",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "创建安防事件",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/security_events/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "security_events"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"device_id\": 1, \"user_id\": 26, \"event_type\": \"非法入侵\", \"description\": \"测试事件\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有安防事件",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/security_events/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "security_events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "更新安防事件",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/security_events/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "security_events",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"device_id\": 1, \"user_id\": 26, \"event_type\": \"非法入侵\", \"description\": \"测试事件\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "删除安防事件",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/security_events/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "security_events",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "创建反馈",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/feedbacks/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "feedbacks"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"device_id\": 1, \"user_id\": 26, \"rating\": 5, \"comment\": \"很好\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "获取所有反馈",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/feedbacks/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "feedbacks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "更新反馈",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/feedbacks/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "feedbacks",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"device_id\": 1, \"user_id\": 26, \"rating\": 5, \"comment\": \"很好\"}"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "删除反馈",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/feedbacks/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "feedbacks",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "房屋面积分布分析",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/analytics/house_area_distribution",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "analytics",
+            "house_area_distribution"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "用户满意度分析",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/analytics/user_satisfaction",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "analytics",
+            "user_satisfaction"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "设备使用频率分析",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/analytics/device_usage_frequency",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "analytics",
+            "device_usage_frequency"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "安防事件类型分布",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/analytics/security_event_types",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "analytics",
+            "security_event_types"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
